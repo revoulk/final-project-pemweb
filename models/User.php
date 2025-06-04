@@ -7,8 +7,14 @@ class User {
     }
 
     public function getAll() {
-        $stmt = $this->pdo->query("SELECT * FROM users ORDER BY id DESC");
+        $stmt = $this->pdo->query("SELECT * FROM users");
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getByUsername($username) {
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->execute([$username]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getById($id) {
@@ -18,20 +24,13 @@ class User {
     }
 
     public function create($username, $password, $role) {
-        $hash = password_hash($password, PASSWORD_DEFAULT);
         $stmt = $this->pdo->prepare("INSERT INTO users (username, password, role) VALUES (?, ?, ?)");
-        return $stmt->execute([$username, $hash, $role]);
+        return $stmt->execute([$username, $password, $role]);
     }
 
     public function update($id, $username, $password, $role) {
-        if ($password) {
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            $stmt = $this->pdo->prepare("UPDATE users SET username = ?, password = ?, role = ? WHERE id = ?");
-            return $stmt->execute([$username, $hash, $role, $id]);
-        } else {
-            $stmt = $this->pdo->prepare("UPDATE users SET username = ?, role = ? WHERE id = ?");
-            return $stmt->execute([$username, $role, $id]);
-        }
+        $stmt = $this->pdo->prepare("UPDATE users SET username = ?, password = ?, role = ? WHERE id = ?");
+        return $stmt->execute([$username, $password, $role, $id]);
     }
 
     public function delete($id) {

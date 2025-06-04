@@ -1,12 +1,12 @@
 <?php
-$host = "localhost";
-$dbname = "apotek_db";
-$username = "root";
-$password = "";
+$host = 'localhost';
+$dbname = 'apotek_db';
+$user = 'root';
+$pass = '';
 
 try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Koneksi gagal: " . $e->getMessage());
+    die("Database connection failed: " . $e->getMessage());
 }
