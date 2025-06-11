@@ -1,4 +1,3 @@
-<!-- Footer -->
 <footer class="page-footer font-small blue pt-4" 
         style="background-color: #98FB98; color: black; padding: 20px 0; border-top: 2px solid #2E8B57;">
 
@@ -46,7 +45,6 @@
     </div>
 </footer>
 
-<!-- Tambahkan style agar footer tetap di bawah & link terlihat jelas -->
 <style>
     html, body {
         height: 100%;
@@ -57,7 +55,6 @@
     .page-footer {
         margin-top: auto;
     }
-    /* Style untuk link footer */
     .footer-link {
         color: blue;
         text-decoration: none;
