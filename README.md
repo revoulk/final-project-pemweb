@@ -1,4 +1,4 @@
-# Final Project Pemrograman Web H081
+# Final Project Pemrograman Web H Kelompok 1
 
 ## Daftar Anggota
 
@@ -6,4 +6,4 @@
 |----|---------------|-------------------------|-----------------|
 | 1  | 19081010153   | Pandu Prasetyo Wibowo   | Prastyoo        |
 | 2  | 21081010194 | Ananda Azra Razali      | revoulk         |
-  | 3  | 22081010145   | Fatan Izzatur Rahman   | darw1nboi        |
+| 3  | 22081010145   | Fatan Izzatur Rahman   | darw1nboi        |
