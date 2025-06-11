@@ -38,7 +38,7 @@
 
     <!-- Copyright -->
     <div class="text-center py-3" style="background-color: #2E8B57; color: white; font-weight: bold;">
-        © 2024 Copyright : 
+        © 2025 Copyright : 
         <a href="https://google.com" style="color: white; text-decoration: none;">
             tokoobatsby.com
         </a>
