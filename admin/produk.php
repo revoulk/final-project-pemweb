@@ -61,7 +61,7 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
                 <th>Kategori</th>
                 <th>Nama Produk</th>
                 <th>Harga (Rp)</th>
-                <th>Berat (Kg)</th>
+                <th>Berat (mg)</th>
                 <th>Foto Produk</th>
                 <th>Pilihan</th>
             </tr>
@@ -75,7 +75,7 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
                 <td><?php echo $pecah['nama_kategori']; ?></td>
                 <td><?php echo $pecah['nama_produk']; ?></td>
                 <td>Rp <?php echo number_format($pecah['harga_produk']); ?></td>
-                <td><?php echo $pecah['berat_produk']; ?> Kg</td>
+                <td><?php echo $pecah['berat_produk']; ?> mg</td>
                 <td>
                     <img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="80">
                 </td>

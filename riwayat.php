@@ -107,7 +107,7 @@ if (!isset($_SESSION["pelanggan"]) || empty($_SESSION["pelanggan"])) {
                     </td>   
                     <td>Rp <?php echo number_format($pecah["total_pembelian"], 0, ',', '.'); ?></td>
                     <td>
-                        <a href="nota.php?id=<?php echo $pecah["id_pembelian"]; ?>" class="btn btn-info btn-sm">NOTA</a>
+                        <a href="nota.php?id=<?php echo $pecah["id_pembelian"]; ?>" class="btn btn-info btn-sm" target="_blank" >NOTA</a>
                         <?php if ($pecah['status_pembelian'] == "pending"): ?>
                             <a href="pembayaran.php?id=<?php echo $pecah["id_pembelian"]; ?>" class="btn btn-success btn-sm">
                                 INPUT PEMBAYARAN

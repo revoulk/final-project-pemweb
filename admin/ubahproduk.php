@@ -78,11 +78,11 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
             <input type="number" name="harga" class="form-control" value="<?php echo $pecah['harga_produk']; ?>" required>
         </div>
         <div class="form-group">
-            <label>Berat (Kg)</label>
+            <label>Berat (mg)</label>
             <input type="number" step="0.01" name="berat" class="form-control" value="<?php echo $pecah['berat_produk']; ?>" required>
         </div>
         <div class="form-group">
-            <label>Foto Produk Saat Ini</label> <br>
+            <label>Foto Produk Saat Ini (500 x 500)</label> <br>
             <img src="../foto_produk/<?php echo $pecah['foto_produk'] ?>" width="200">
         </div>
         <div class="form-group">

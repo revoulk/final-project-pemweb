@@ -86,7 +86,7 @@ while($tiap = $ambil->fetch_assoc()) {
         </div>
 
         <div class="form-group">
-            <label>Berat (Kg)</label>
+            <label>Berat (mg)</label>
             <input type="number" class="form-control" name="berat" placeholder="Masukkan berat produk" required>
         </div>
 
@@ -96,7 +96,7 @@ while($tiap = $ambil->fetch_assoc()) {
         </div>
 
         <div class="form-group">
-            <label>Foto Produk</label>
+            <label>Foto Produk (500 x 500)</label>
             <input type="file" class="form-control" name="foto" required>
         </div>
 
