@@ -1,4 +1,4 @@
-<?php
+<?php 
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -8,7 +8,7 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Data Produk</title>
+    <title>Data Pembelian</title>
     <link rel="stylesheet" href="admin/assets/css/bootstrap.css">
     <style>
         body {
@@ -25,13 +25,6 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
         hr {
             border-top: 2px solid #2E8B57;
         }
-        .btn-primary {
-            background-color: #2E8B57;
-            border: none;
-        }
-        .btn-primary:hover {
-            background-color: #228B22;
-        }
         .table-bordered {
             border: 2px solid #2E8B57;
         }
@@ -44,44 +37,54 @@ $koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
             text-align: center;
             vertical-align: middle;
         }
+        .btn-info {
+            background-color: #4682B4;
+            border: none;
+        }
+        .btn-info:hover {
+            background-color: #4169E1;
+        }
+        .btn-success {
+            background-color: #2E8B57;
+            border: none;
+        }
+        .btn-success:hover {
+            background-color: #228B22;
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Data Produk</h2>
+    <h2>Data Pembelian</h2>
     <hr>
-
-    <p><a href="index.php?halaman=tambahproduk" class="btn btn-primary">TAMBAH DATA</a></p>
 
     <table class="table table-bordered">
         <thead>
             <tr>
                 <th>No</th>
-                <th>Kategori</th>
-                <th>Nama Produk</th>
-                <th>Harga (Rp)</th>
-                <th>Berat (Kg)</th>
-                <th>Foto Produk</th>
+                <th>Nama Pelanggan</th>
+                <th>Tanggal Pembelian</th>
+                <th>Status Pembelian</th>
+                <th>Total (Rp)</th>
                 <th>Pilihan</th>
             </tr>
         </thead>
         <tbody>
             <?php $nomor=1; ?>
-            <?php $ambil=$koneksi->query("SELECT * FROM produk LEFT JOIN kategori ON produk.id_kategori=kategori.id_kategori"); ?>
+            <?php $ambil=$koneksi->query("SELECT * FROM pembelian JOIN pelanggan ON pembelian.id_pelanggan=pelanggan.id_pelanggan"); ?>
             <?php while($pecah=$ambil->fetch_assoc()){ ?>
             <tr>
                 <td><?php echo $nomor; ?></td>
-                <td><?php echo $pecah['nama_kategori']; ?></td>
-                <td><?php echo $pecah['nama_produk']; ?></td>
-                <td>Rp <?php echo number_format($pecah['harga_produk']); ?></td>
-                <td><?php echo $pecah['berat_produk']; ?> Kg</td>
+                <td><?php echo $pecah['nama_pelanggan']; ?></td>
+                <td><?php echo date("d-m-Y", strtotime($pecah['tanggal_pembelian'])); ?></td>
+                <td><?php echo ucfirst($pecah['status_pembelian']); ?></td>
+                <td>Rp <?php echo number_format($pecah['total_pembelian'], 0, ',', '.'); ?></td>
                 <td>
-                    <img src="../foto_produk/<?php echo $pecah['foto_produk']; ?>" width="80">
-                </td>
-                <td>
-                    <a href="index.php?halaman=ubahproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-warning btn-sm">UBAH</a>
-                    <a href="index.php?halaman=hapusproduk&id=<?php echo $pecah['id_produk']; ?>" class="btn btn-danger btn-sm">HAPUS</a>
+                    <a href="index.php?halaman=detail&id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-info btn-sm">DETAIL</a>
+                    <?php if ($pecah['status_pembelian'] !== "pending"): ?>
+                        <a href="index.php?halaman=pembayaran&id=<?php echo $pecah['id_pembelian']; ?>" class="btn btn-success btn-sm">PEMBAYARAN</a>
+                    <?php endif ?>
                 </td>
             </tr>
             <?php $nomor++; ?>
