@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'koneksi.php'; 
+include 'koneksi.php';
 
 // Cek apakah pelanggan sudah login
 if (!isset($_SESSION["pelanggan"]) || empty($_SESSION["pelanggan"])) {

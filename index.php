@@ -77,19 +77,19 @@ include 'koneksi.php';
             <!-- Carousel content -->
             <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                    <img src="01.jpg" alt="Gambar 1">
+                    <img src="assets/images/01.jpg" alt="Gambar 1">
                     <div class="carousel-caption">
                         <h3>Toko Obat Surabaya - Terpercaya & Berkualitas</h3>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="02.jpg" alt="Gambar 2">
+                    <img src="assets/images/02.jpg" alt="Gambar 2">
                     <div class="carousel-caption">
                         <h3>Obat Terlengkap</h3>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="03.jpg" alt="Gambar 3">
+                    <img src="assets/images/03.jpg" alt="Gambar 3">
                     <div class="carousel-caption">
                         <h3>Pelayanan Cepat & Aman</h3>
                     </div>

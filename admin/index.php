@@ -50,7 +50,7 @@ font-size: 16px;"> Last Access : <?php date_default_timezone_set('Asia/Jakarta')
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
                 <li class="text-center">
-                    <img src="../first-aid-kit.png" class="user-image img-responsive"/>
+                    <img src="../assets/images/first-aid-kit.png" class="user-image img-responsive"/>
                     </li>
                 
                     

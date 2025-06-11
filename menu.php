@@ -6,7 +6,7 @@
         <!-- Logo & Pencarian -->
         <form action="pencarian.php" class="navbar-form navbar-left" style="display: flex; align-items: center; gap: 10px; margin: 0;">
             <a href="index.php">
-                <img src="first-aid-kit.png" height="50" style="margin-right: 10px;">
+                <img src="assets/images/first-aid-kit.png" height="50" style="margin-right: 10px;">
             </a>
             <input type="text" class="form-control" name="keyword" 
                    style="padding: 10px; border-radius: 5px; border: 1px solid #2E8B57; width: 250px;" 

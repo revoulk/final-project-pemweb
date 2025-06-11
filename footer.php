@@ -8,11 +8,11 @@
             <div class="col-md-6">
                 <h3 class="text-uppercase font-weight-bold">KONTAK KAMI :</h3>
                 <h5>
-                    <img src="whatsapp.png" width="30"> 082230013246 &nbsp; 
-                    <img src="instagram.png" width="30"> toko_obat_sby
+                    <img src="assets/images/whatsapp.png" width="30"> 082230013246 &nbsp; 
+                    <img src="assets/images/instagram.png" width="30"> toko_obat_sby
                 </h5>
                 <h5>
-                    <img src="lokasi.png" width="25"> Jl. Medokan Tambak Ayu No 10, Surabaya
+                    <img src="assets/images/lokasi.png" width="25"> Jl. Medokan Tambak Ayu No 10, Surabaya
                 </h5>
             </div>
 
