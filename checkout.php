@@ -182,7 +182,7 @@ if (!isset($_SESSION["keranjang"]) || empty($_SESSION["keranjang"])) {
             unset($_SESSION["keranjang"]);
 
             echo "<script>alert('Checkout Berhasil!');</script>";
-            echo "<script>location='nota.php?id=$id_pembelian_barusan';</script>";
+            echo "<script>location='pembayaran.php?id=$id_pembelian_barusan';</script>";
         }
         ?>
     </div>
