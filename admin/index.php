@@ -1,6 +1,5 @@
 <?php
 session_start();
-$koneksi = new mysqli("localhost","root","","toko_kesehatan");
 
 if (!isset($_SESSION['admin']))
 {
@@ -9,6 +8,8 @@ if (!isset($_SESSION['admin']))
     header('location:login.php');
     exit();
 }
+
+require_once '../koneksi.php';
 ?>
 
 <!DOCTYPE html>

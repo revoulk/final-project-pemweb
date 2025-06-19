@@ -2,7 +2,8 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
+
+require_once '../koneksi.php';
 ?>
 
 <!DOCTYPE html>

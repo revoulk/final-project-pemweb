@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'koneksi.php';
+require_once 'koneksi.php';
 
 // Mendapatkan id produk dari URL
 $id_produk = $_GET["id"];

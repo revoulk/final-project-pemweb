@@ -1,4 +1,4 @@
-<?php include 'koneksi.php'; ?>
+<?php require_once 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html>
 <head>

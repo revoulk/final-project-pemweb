@@ -1,6 +1,6 @@
 2<?php 
 session_start();
-include 'koneksi.php';
+require_once 'koneksi.php';
 
 // Pastikan ada parameter ID pembelian
 if (!isset($_GET["id"]) || empty($_GET["id"])) {

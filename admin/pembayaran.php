@@ -2,7 +2,7 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-$koneksi = new mysqli("localhost", "root", "", "toko_kesehatan");
+require_once '../koneksi.php';
 
 // mendapatkan id pembelian dari URL
 $id_pembelian = $_GET['id'];

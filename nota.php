@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('koneksi.php');
+require_once 'koneksi.php';
 
 require_once 'dompdf_2-0-3/dompdf/autoload.inc.php';
 

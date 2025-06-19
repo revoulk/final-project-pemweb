@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'koneksi.php';
+require_once 'koneksi.php';
 
 // Jika keranjang kosong, redirect ke halaman utama
 if (empty($_SESSION["keranjang"]) OR !isset($_SESSION["keranjang"])) {

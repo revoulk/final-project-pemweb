@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include 'koneksi.php';
+require_once 'koneksi.php';
 
 // Jika pelanggan belum login, alihkan ke halaman login
 if (!isset($_SESSION["pelanggan"])) {
